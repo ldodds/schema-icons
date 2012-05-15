@@ -83,8 +83,10 @@ I'll look at adding licensing notes to the mappings to make doing the Right Thin
 CACHING
 -------
 
-The project includes a Ruby script to create a local cache of the icons listed in the mapping. The script shouldn't 
-require anything more than a vanilla Ruby install.
+The project includes a Ruby script to create a local cache of the icons listed in the mapping. The script uses the Zip 
+gem, so make sure you have that installed:
+
+	sudo gem install zip
 
 Run the script from the directory containing the mapping file and it will create an "icons" sub-directory and download 
 and unzip all of the SVG files into that location:

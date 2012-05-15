@@ -17,7 +17,7 @@ File.open("icons/index.html", "w") do |index|
 	File.open("icon-mapping.csv").each do |line|
 		type, page, name, number, icon_page, download = line.split(",")
 		#skip header
-		if type != "Type Name"
+		if type != "Type Name" && name != ""
 			begin
 				#cache zipped svg locally
 				temp = Tempfile.new(type)
